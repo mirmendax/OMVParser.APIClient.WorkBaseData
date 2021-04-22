@@ -1,0 +1,404 @@
+----- Никогда не редактируйте этот файл! Используйте шрифт MS San Serif. -----
+Номер	Наименование	Мин.	Макс.	Исходная
+5	swMaket4m      	0	1	0
+6	swErr@Fail2PLC 	0	1	0
+7	sw2RC          	0	1	0
+8	swC16@Asym     	0	1	0
+9	swInvertGenOn  	0	1	0
+10	swPult_OR_DI   	0	1	1
+11	swCheckPhaseIg 	0	1	0
+12	swU16ResExc    	0	1	1
+14	swNoHistSetCtrl	0	1	0
+15	swEstopNoSensIg	0	1	0
+16	swOffKMthenSF  	0	1	0
+17	swLimQgMaxLevel	0	1	0
+70	MinUg          	0	0,8	0,7
+71	tMinUg s       	0	30	1
+72	MaxUg          	1,12	1,25	1,15
+73	tMaxUg s       	0	30	1
+74	HugeUg         	1,2	1,35	1,3
+75	tHugeUg s      	0	30	2,5
+82	CorrIfOvl      	0	2	1
+84	Xp             	0,1	0,5	0,362
+86	If@Ug=0,8      	0,01	2	0,235
+87	If@Ug=0,9      	0,01	2	0,28
+88	If@Ug=1,0      	0,01	2	0,319
+89	If@Ug=1,1      	0,01	2	0,385
+90	If@Ug=1,2      	0,01	2	0,464
+91	If@Ug=1,3      	0,01	2	0,619
+92	If@Ug=1,5      	0,01	2	1,423
+97	TaUrms s       	0	0,5	0
+101	CorrUg         	0	5	1,034
+110	hUgCA          	0	2	0,1
+111	hUgABorBC      	0	2	0,02
+112	hUgB           	0	2	0,04
+113	hCompareUg     	0,05	2	0,1
+114	Ie@CheckUg     	0	3	0,2
+115	Ug@CheckUg     	0,03	0,7	0,03
+123	kXq            	0	1	0,3441
+125	CorrEq         	0	5	1
+141	CorrUbar       	0	3	1,02
+142	TaUbar s       	0	5	0,3
+161	CorrIg         	0	5	1,1
+163	CorrIgOvl      	0	2	1
+165	Ig@GenOnBar    	0,01	2,5	0,2
+166	CorrIgEstop    	0	5	2
+191	CorrPhi gr     	-179,5	179,5	121
+192	CosNom         	0,8	0,95	0,9
+193	swCosNom=0,98  	0	1	0
+194	swCosNom=0,92  	0	1	0
+201	CorrIg2        	0	6	1
+211	CorrPhi2 gr    	-179,5	179,5	0
+241	CorrIe         	0	5	1,476
+243	CorrIe(A-C)    	-0,1	0,1	0
+248	CorrIeEstop    	0	5	1,2
+249	CorrBiasIeA    	-0,1	0,1	0
+250	CorrBiasIeC    	-0,1	0,1	0
+261	CorrUf         	0	4	1,397
+262	TaUf s         	0	1	0
+271	CorrUfRes      	0	20	1
+272	OffsetUfRes mA 	0	50	4
+273	TaUfRes s      	0,2	1	0,2
+274	Min(UfRes/Uf)  	1,04	1,5	1,2
+275	Max(UfRes/Uf)  	1,09	1,5	1,3
+281	CorrUsyn       	0	3	0,9949
+282	TaUsyn s       	0,01	0,1	0,02
+289	tLossUsyn s    	0,02	1,5	0,5
+290	hUsynCA        	0	2	0,08
+291	hUsynABorBC    	0	2	0,02
+292	hUsynB         	0	2	0,04
+293	hCompareUsyn   	0,02	2	0,15
+300	HeatF          	0	1,01	0
+301	If.1           	1,02	1,15	1,1
+302	tIf1 s         	60	4000	3000
+303	If.2           	1,05	1,48	1,15
+304	tIf2 s         	30	4000	750
+305	If.3           	1,05	1,48	1,2
+306	tIf3 s         	10	4000	300
+307	If.4           	1,05	1,48	1,3
+308	tIf4 s         	4	4000	200
+310	tIf=1,5 s      	4	300	100
+312	tIf=2,0 s      	4	60	45
+314	TaCoolF s      	60	1800	333
+315	HeatFrpt       	0	0,9	0,05
+316	HeatFfail      	1,03	1,2	1,07
+320	HeatG          	0	1,01	0
+321	Ig.1           	1,02	1,15	1,1
+322	tIg1 s         	60	4000	3000
+323	Ig.2           	1,05	1,48	1,15
+324	tIg2 s         	30	4000	750
+325	Ig.3           	1,05	1,48	1,2
+326	tIg3 s         	10	4000	300
+327	Ig.4           	1,08	1,48	1,3
+328	tIg4 s         	4	4000	200
+330	tIg=1,5 s      	4	300	100
+332	tIg=2,0 s      	4	60	50
+334	TaCoolG s      	60	1800	240
+335	HeatGrpt       	0	0,9	0,05
+336	HeatGfail      	1,03	1,2	1,07
+341	P1             	0,05	1,3	0,417
+342	P2             	0,05	1,3	0,708
+343	P3             	0,05	1,3	1
+344	P4             	0,05	1,3	1,111
+345	Ql@P=0         	-3	-0,01	-1,39
+346	Ql@P1          	-3	-0,01	-1,251
+347	Ql@P2          	-3	0,6	-0,973
+348	Ql@P3          	-3	0,6	-0,348
+349	Ql@P4          	-3	0,6	-0,008
+350	Qm@P=0         	-3	-0,01	-1,716
+351	Qm@P1          	-3	-0,01	-1,544
+352	Qm@P2          	-3	0,6	-1,201
+353	Qm@P3          	-3	0,6	-0,429
+354	Qm@P4          	-3	0,6	-0,01
+355	Qh@P=0         	-3	-0,01	-2,076
+356	Qh@P1          	-3	-0,01	-1,869
+357	Qh@P2          	-3	0,6	-1,454
+358	Qh@P3          	-3	0,6	-0,519
+359	Qh@P4          	-3	0,6	-0,012
+361	MaxTrot gr     	0	200	130
+362	BiasTrot gr    	-500	500	235
+363	kTrot gr       	0	500	351
+364	Ubrush         	0	0,5	0,005
+365	Rcable pu      	0	0,5	0,005
+366	TaTrot s       	0	1800	50
+372	TsQg s         	0,1	100	10
+373	hQgToZero      	0,005	0,1	0,02
+374	TsQgToZero s   	0,1	100	20
+382	TsCosPhi s     	0,1	100	2
+390	hUgToUbar      	0,002	0,05	0,005
+391	TsUgToUbar s   	0,1	10	2
+396	SetUg107       	1	1,3	1,07
+397	SetUg115       	1	1,3	1,15
+398	tSetUg115 s    	1	20	5
+401	MinSetUg       	0,2	0,99	0,8
+402	MaxSetUg       	1,01	1,4	1,1
+403	vSetUg %/s     	0,1	5	0,5
+404	tMaxMoveSet    	0,5	60	60
+405	FgV/Hz Hz      	40	70	49,9
+406	kV/Hz %/Hz     	0	10	2
+408	dSetUgResExc   	0	0,1	0,005
+410	k0U            	0,1	50	20
+411	k0Uoff         	0,1	30	15
+412	dXtrans %      	-15	15	-1
+413	dXtrans2 %     	-15	15	0
+420	k0F pu/Hz      	0	10	0
+421	T0F s          	0,5	5	2
+422	Ta0F s         	0	0,2	0,08
+430	k1F pu/Hz/s    	0	5	1,1
+431	T1F s          	0,015	0,06	0,05
+432	Ta1F s         	0	0,2	0,2
+438	Qg@k1If        	-2	2	0
+439	k1If@Qg<       	0	5	1
+440	k1If@Qg>       	0	5	1
+441	T1If s         	0,01	0,06	0,02
+442	Ta1If s        	0	0,3	0,15
+450	k1U            	0	10	3
+451	T1U s          	0,01	0,06	0,02
+452	Ta1U s         	0	0,2	0,06
+460	PgOnPSS        	0,1	2	0,2
+461	TaVetoPSS s    	0	2	0,8
+462	dUposVetoPSS pu	0,02	0,2	0,03
+463	dUnegVetoPSS pu	-0,2	-0,02	-0,03
+464	kResetVetoPSS  	0	1	0,5
+465	tDelayVetoPSS s	0,01	5	0,7
+466	tFaultEnPSS s  	0	10	3
+467	swLimQgVetoPSS 	0	1	0
+468	tBlockUg'If' s 	0,01	1	0,5
+469	tBlockPss' s   	0,01	0,2	0,04
+470	DropUg         	0,01	1	0,1
+471	kSetForc       	0	0,98	0,85
+472	tForcOff s     	0,02	0,5	0,1
+473	kResetForc     	0	0,98	0,85
+489	MinBiasPlant   	-2,5	0	-0,2
+490	vSetPlant %/s  	0,2	5	0,1999
+491	kIePlant       	0	20	5
+492	MinSetPlant    	0	0,5	0,02
+493	MaxSetPlant    	0,1	2,5	1
+494	TsCmnPlant     	0,1	10	0,5
+495	MaxBiasPlant   	0	2,5	2
+496	CeilPlant      	1	20	2,4
+497	MinAlphaPlant  	1	89	40
+498	CeilPlantFG    	1	20	2,5
+499	dArcCosPlantFG 	0	3	1
+501	vSetIe %/s     	0,2	5	0,1999
+502	kIe            	0,1	20	5
+503	IeOff          	0	1	0,692
+504	MinSetIeOff    	0	2	0,481
+505	MaxSetIeOff    	0	2	0,865
+506	MinSetIe       	0	2	0,3
+507	MaxSetIe       	0	2	1,1
+508	FgToStopway    	0	47	45
+510	TsCmn s        	0,1	50	2
+511	TsCmnOff s     	0,1	50	0,5
+512	MaxBias        	0	5	2,2
+513	MaxBiasOff     	0	1,5	1
+514	hXsCmn         	0,1	5	0,5
+515	Ceil           	1	50	2,9
+516	CeilFG         	1	50	3
+517	dArcCosFG      	0	3	1
+518	nFeedback      	1	50	10
+519	swFb 0-Uf 1-Ie 	0	1	0
+540	SetIeSS        	0,2	1	0,5
+541	tOnPlsSS s     	0,5	10	1
+542	isIeSS         	0,05	1	0,1
+543	tWaitIeSS s    	0,5	20	5
+544	tOffKsrSS s    	0,1	20	2
+550	SetIe1TPU      	0	2	0,3
+551	SetIe2TPU      	0	2	0,5
+552	SetIe3TPU      	0	2	1
+553	SetIe4TPU      	0	2	1,5
+554	vSetIeTPU %/s  	0,2	10	0,5
+555	isIeTPU        	0,01	0,5	0,1
+557	kIceBreak      	0,1	20	4
+558	MaxSetIceBreak 	0,05	1	0,865
+559	vSetIceBreak   	0,1	10	0,5
+560	SetIeEstop     	0,1	1	0,25
+561	kIeEstop       	0,1	20	4
+562	MinSetEstop    	0,08	1	0,1
+563	MaxSetEstop    	0	1	0,9
+570	SetUgBgnExc    	0,1	0,75	0,3
+571	SetUgEndExc    	0	1,05	0,75
+572	SetIeBgnExc    	0	0,8	0,161
+573	SetIeEndExc    	0	0,8	0,692
+574	tExcite s      	1	20	5
+575	IeOffKNV pu    	0,05	0,5	0,055
+576	tWaitIe s      	0,1	10	5
+577	tReachSetBgn s 	0,1	10	2,5
+578	SetIeLineCharge	0	1	0,03
+580	t90gr s        	0	5	1,5
+581	tOffPls s      	3	10	5
+582	IeOffPls       	0,01	0,1	0,05
+584	FgInvert Hz    	30	48	41
+585	tDelayRelInv s 	0,01	10	1
+599	tLimOvlOff s   	0,01	10	3
+600	kLimOvlIf      	0,1	20	5
+610	kLimOvlIg      	0,1	20	2
+620	kLimQg         	0,1	10	3
+621	hLimQgFail     	0,03	1	0,05
+622	tLimQgFail s   	0,1	100	2
+626	tInvertLimOff  	0,1	10	6
+627	kLimNom        	0,1	20	5
+628	kLimCos        	0,1	20	5
+629	DelayLimIfMax s	0,02	0,6	0,15
+630	kLimIf         	0,1	20	5
+631	SetLimIfMax    	0,5	5	2
+632	SetLimIfMaxOff 	0,1	3	0,9
+633	SetLimNom      	0,1	5	0,9
+634	SetLimCos      	0,1	5	0,8
+635	Set2LimCos     	0,1	5	0,8
+636	tSet2LimCos    	0,1	20	1
+637	SetLimIfMin    	0	1	0,05
+638	hLimIfMaxFail  	0,04	2	0,3
+639	tLimIfMaxFail s	0,1	100	2
+640	kLimUf         	0,1	20	8
+641	SetLimUf       	0,1	3	2,9
+642	SetLimUfOff    	0,1	3	2,2
+643	TsLimUf s      	0,02	2	0,1
+650	kLimIe         	0,1	20	4
+651	SetLimIe       	0,1	5	2,5
+652	SetLimIeOff    	0,1	3	2,5
+653	TsLimIe s      	0,02	2	0,1
+654	hLimIeFail     	0,04	2	0,3
+655	tLimIeFail s   	0,1	100	0,5
+656	MaxIe@MinUg    	0,5	3	1
+657	tMaxIe@MinUg s 	0,1	20	0,5
+658	MaxIe@MinQg    	0,5	3	1,5
+659	tMaxIe@MinQg s 	0,1	20	0,5
+661	CorrIeOvl      	0	2	1
+662	kLimOvlIe      	0,1	20	5
+670	HeatE          	0	1,01	0
+671	Ie.1           	1,02	1,2	1,06
+672	tIe1 s         	60	4000	3240
+673	Ie.2           	1,05	1,5	1,1
+674	tIe2 s         	30	4000	2376
+675	Ie.3           	1,05	1,5	1,15
+676	tIe3 s         	10	4000	1296
+677	Ie.4           	1,05	2,5	1,2
+678	tIe4 s         	4	4000	54
+679	Ie.5           	1,3	3	1,5
+680	tIe5 s         	4	300	54
+681	Ie.6           	1,4	5	2,14
+682	tIe6 s         	4	60	18
+683	TaCoolE s      	60	1800	240
+684	HeatErpt       	0	0,9	0,05
+685	HeatEfail      	1,03	1,2	1,07
+690	SetLimUsyn     	0,8	1,5	1,1
+691	kLimUsyn       	0,1	20	5
+692	Fsyn@LimUsyn   	40	70	50,5
+693	dSet/dFsyn %/Hz	0	10	0,8
+700	CorrPsi gr     	-179	179	-0,2
+702	MinFsyn Hz     	30	48	41
+703	MaxFsyn Hz     	52	120	75
+704	MinUsyn        	0,03	0,5	0,06
+705	dPsi/dFsyn o/Hz	0	2	0,7
+707	CorrPhaseAB gr 	-179	179	0
+710	kPLL           	0,01	5	0,3
+711	TsPLL s        	0,05	5	0,4
+712	tWaitPLL s     	0,05	5	0,5
+713	hyPD           	0,01	1	0,2
+714	tWatchPD s     	0,02	2	0,1
+721	MinAlpha gr    	2	85	5
+723	MaxAlpha@Ie=0  	90	170	135
+724	MaxAlpha@Ie=2  	90	170	130
+725	Ie@MaxAlpha    	0,1	2	1
+726	Ie@Pulse120    	-0,1	3	0,2
+727	tShortPls ms   	0,1	3	1
+728	AlphaToForcGr  	85	150	100
+729	IfToForcGr pu  	0	0,2	0,03
+730	AlphaTest gr   	0	179	135
+731	vAlphaTest gr/s	0,25	5	1
+732	MinAlphaTest gr	0	89	5
+733	MaxAlphaTest gr	91	179	135
+734	dAlphaTestFG gr	0	150	0
+741	SetUfProt      	-0,2	1	0,3
+742	tOffPlsProt s  	0,01	0,5	0,1
+750	SetIeAsym      	-1	3	0,3
+751	tAsym s        	0	10	0,5
+752	Corr udAsym    	0	5	0,531
+753	Set udJump     	0	5	0,1
+754	Set ud-usyn    	0	5	0,1
+755	MinAlphaAsym   	10	60	10
+756	MaxAlphaAsym   	90	110	100
+757	MinUsynAsym    	0,2	1,5	0,3
+758	hAlphaBefore   	1	10	5
+759	hAlphaAfter    	1	10	7
+760	IeTestRC pu    	0	5	0,3
+761	tFailRC s      	0,5	10	2
+762	swBreak@FailRC 	0	1	0
+763	tBreakRC s     	0,5	10	2
+764	IeOnFan pu     	0,05	0,5	0,2
+765	UsynOnFan      	0	0,9	0,6
+766	delayCheckPress	1	30	5
+767	delayBbridge s 	0	30	2
+768	delayBCfan s   	0	30	2
+769	UsynCheckTrans 	0	0,95	0,8
+790	delayBreakTir s	0	30	1
+791	BiasAO1 V      	-20	20	0
+792	BiasAO2 V      	-20	20	0
+793	BiasAO3 V      	-20	20	0
+794	BiasAO4 V      	-20	20	0
+801	ScaleAO1 v/pu  	0	150	4,712
+802	ScaleAO2 v/pu  	0	150	4,81
+803	ScaleAO3 v/pu  	0	150	3,498
+804	ScaleAO4 v/pu  	0	150	4,585
+810	hDacTest V     	0,005	1,01	0,004878
+820	tBlock/SetPls s	0,01	60	0,3
+830	swPulse        	0	1	0
+831	AmpTest %      	-100	100	5
+832	tPulse s       	0,01	160	5
+833	fSinus Hz      	0,01	10	1
+834	swSinus        	0	1	0
+890	Timeout PLC s  	0,2	2	1
+908	tBreak 4-20 mA 	0	5	0,5
+909	Ibreak 4-20 mA 	0	3,9	3
+911	CorrAi1        	0	10	1
+912	Set1Ai1 mA(V)  	-50	50	10
+913	tSet1Ai1 s     	1	3000	5
+914	Set2Ai1 mA(V)  	-50	50	15
+915	tSet2Ai1 s     	1	3000	5
+916	hSet1Ai1 mA(V) 	0	5	0,5
+917	hSet2Ai1 mA(V) 	0	5	0,5
+921	CorrAi2        	0	10	1
+922	Set1Ai2 mA(V)  	-50	50	10
+923	tSet1Ai2 s     	1	3000	5
+924	Set2Ai2 mA(V)  	-50	50	15
+925	tSet2Ai2 s     	1	3000	5
+926	hSet1Ai2 mA(V) 	0	5	0,5
+927	hSet2Ai2 mA(V) 	0	5	0,5
+931	CorrAi3        	0	10	1
+932	Set1Ai3 mA(V)  	-50	50	10
+933	tSet1Ai3 s     	1	3000	5
+934	Set2Ai3 mA(V)  	-50	50	15
+935	tSet2Ai3 s     	1	3000	5
+936	hSet1Ai3 mA(V) 	0	5	0,5
+937	hSet2Ai3 mA(V) 	0	5	0,5
+941	CorrAi4        	0	10	1
+942	Set1Ai4 mA(V)  	-50	50	10
+943	tSet1Ai4 s     	1	3000	5
+944	Set2Ai4 mA(V)  	-50	50	15
+945	tSet2Ai4 s     	1	3000	5
+946	hSet1Ai4 mA(V) 	0	5	0,5
+947	hSet2Ai4 mA(V) 	0	5	0,5
+951	CorrAi5        	0	10	1
+952	Set1Ai5 mA(V)  	-50	50	10
+953	tSet1Ai5 s     	1	3000	5
+954	Set2Ai5 mA(V)  	-50	50	15
+955	tSet2Ai5 s     	1	3000	5
+956	hSet1Ai5 mA(V) 	0	5	0,5
+957	hSet2Ai5 mA(V) 	0	5	0,5
+961	CorrAi6        	0	10	1
+962	Set1Ai6 mA(V)  	-50	50	10
+963	tSet1Ai6 s     	1	3000	5
+964	Set2Ai6 mA(V)  	-50	50	15
+965	tSet2Ai6 s     	1	3000	5
+966	hSet1Ai6 mA(V) 	0	5	0,5
+967	hSet2Ai6 mA(V) 	0	5	0,5
+970	Ai1Imitator    	-50	50	12
+971	Ai2Imitator    	-50	50	12
+972	Ai3Imitator    	-50	50	8
+973	Ai4Imitator    	-50	50	8
+974	Ai5Imitator    	-50	50	12
+975	Ai6Imitator    	-50	50	8
+997	swVetoLink     	0	1	0
+998	swVetoFailTC   	0	1	0
+999	swAllView      	0	1	1
