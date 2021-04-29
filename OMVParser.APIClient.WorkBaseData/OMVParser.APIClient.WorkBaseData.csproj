@@ -6,14 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RestSharp" Version="106.11.7" />
-    <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="106.11.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="16_ARV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.APIClient.WorkBaseData\Base.APIClient.WorkBaseData.csproj" />
   </ItemGroup>
 
 </Project>

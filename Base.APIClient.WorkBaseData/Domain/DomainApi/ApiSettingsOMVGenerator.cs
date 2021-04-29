@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace WorkBaseData.Domain.DomainApi
+namespace Base.APIClient.WorkBaseData.Domain.DomainApi
 {
-    public class ApiSettingsOMVGenerator
+    public class ApiSettingsOMVGenerator : BaseApi
     {
         [Display(Name = "Ссылка на генератор")]
         public Guid GeneratorId { get; set; }

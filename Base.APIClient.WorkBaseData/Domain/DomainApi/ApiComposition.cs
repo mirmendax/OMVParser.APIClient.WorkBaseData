@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace WorkBaseData.Domain.DomainApi
+namespace Base.APIClient.WorkBaseData.Domain.DomainApi
 {
-    public class ApiComposition
+    public class ApiComposition : BaseApi
     {
         [Display(Name = "Ссылка на генератор")]
         public Guid GeneratorId { get; set; }

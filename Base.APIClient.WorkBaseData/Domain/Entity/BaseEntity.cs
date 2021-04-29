@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace OMVParser.APIClient.WorkBaseData.Domain.Entity
+namespace Base.APIClient.WorkBaseData.Domain.Entity
 {
     public abstract class BaseEntity
     {

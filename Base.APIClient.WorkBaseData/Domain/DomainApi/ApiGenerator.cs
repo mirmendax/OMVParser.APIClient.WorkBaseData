@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WorkBaseData.Domain.DomainApi
+﻿namespace Base.APIClient.WorkBaseData.Domain.DomainApi
 {
-    public class ApiGenerator
+    public class ApiGenerator : BaseApi
     {
         public int Number { get; set; }
         public string TypeGenerator { get; set; }
