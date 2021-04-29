@@ -30,31 +30,28 @@ namespace Base.APIClient.WorkBaseData
 
         private string RouteCancat(string route, object subroute)
         {
-            if (string.IsNullOrEmpty(route))
-            {
+            if (string.IsNullOrEmpty(route))            
                 throw new ArgumentException($"{nameof(route)} не может быть неопределенным или пустым.", nameof(route));
-            }
-            string route_full = route[route.Length - 1] == '/'
+            
+            if (subroute is null)           
+                throw new ArgumentNullException(nameof(subroute));
+            //Проверка последнего символа в route для добавления subroute
+            return route[^1] == '/'
                 ? route + subroute.ToString()
                 : route + '/' + subroute.ToString();
-            return route_full;
         }
 
         public async Task<Uri> CreateAsync<T>(T api, string route)
         {
-            try
-            {
-                var req = new RestRequest(route, Method.POST, DataFormat.Json);
-                req.AddJsonBody(api);
-                var result = await client.ExecuteAsync<T>(req);
-                if (result.StatusCode != HttpStatusCode.OK) lastErrorResult = result.StatusDescription;
-                return result.ResponseUri;
-            }
-            catch (Exception e) { }
-            return null;
+
+            var req = new RestRequest(route, Method.POST, DataFormat.Json);
+            req.AddJsonBody(api);
+            var result = await client.ExecuteAsync<T>(req);
+            if (result.StatusCode != HttpStatusCode.OK) lastErrorResult = result.StatusDescription;
+            return result.ResponseUri;            
         }
 
-        public async Task<T> GetByIdAsync<T>(Guid id, string route)
+        public async Task<T> GetItemAsync<T>(Guid id, string route)
         {
             string route_full = RouteCancat(route, id);
             var request = new RestRequest(route_full, Method.GET, DataFormat.Json);
@@ -63,7 +60,7 @@ namespace Base.APIClient.WorkBaseData
             return result.Data;
         }
 
-        public async Task<T> GetByNumberAsync<T>(int number, string route)
+        public async Task<T> GetItemAsync<T>(int number, string route)
         {
             string route_full = RouteCancat(route, number);
             var request = new RestRequest(route_full, Method.GET, DataFormat.Json);
@@ -92,7 +89,7 @@ namespace Base.APIClient.WorkBaseData
             return result.StatusCode;
         }
 
-        public async Task<List<T>> GetList<T>(string route)
+        public async Task<List<T>> GetItemsAsync<T>(string route)
         {
             var request = new RestRequest(route, Method.GET, DataFormat.Json);
             var result = await client.ExecuteAsync<List<T>>(request);

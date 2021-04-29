@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Base.APIClient.WorkBaseData;
-using Base.APIClient.WorkBaseData.Domain.DomainApi;
 using Base.APIClient.WorkBaseData.Domain.Entity;
 using Newtonsoft.Json;
 
@@ -13,14 +12,24 @@ namespace OMVParser.APIClient.WorkBaseData
         {
             Console.WriteLine("Hello World!");
             var restApi = new RestApiProcessor();
-            var omv = await restApi.GetList<SettingsOMVGenerator>("/api/v1/SettingsOMV");
+            
+            var omv = await restApi.GetItemsAsync<CompositionPanel>("/api/v1/SettingsOMV");
             if (omv != null && omv.Count > 0)
             {
                 var r = JsonConvert.SerializeObject(omv, Formatting.Indented);
                 //Console.WriteLine(r);
             }
-            var delomv = await restApi.DeleteAsync(Guid.Parse("a810bc46-1b6b-489a-9804-120894cd5fd4"), "/api/v1/SettingsOMV");
-            Console.WriteLine(delomv);
+            
+            var getOmv = await restApi.GetItemAsync<SettingsOMVGenerator>(omv[0].Id, "/api/v1/SettingsOMV");
+            Console.WriteLine(JsonConvert.SerializeObject(getOmv, Formatting.Indented));
+            getOmv.P4 = 100;
+            getOmv.GeneratorId = (await restApi.GetItemAsync<Generator>(5, "/api/v1/generator/number/")).Id;
+            var update = await restApi.UpdateAsync<SettingsOMVGenerator>(getOmv, getOmv.Id, "/api/v1/SettingsOMV");
+            Console.WriteLine(update);
+            getOmv = await restApi.GetItemAsync<SettingsOMVGenerator>(getOmv.Id, "/api/v1/SettingsOMV");
+            Console.WriteLine(JsonConvert.SerializeObject(getOmv, Formatting.Indented));
+            //var delomv = await restApi.DeleteAsync(Guid.Parse("a810bc46-1b6b-489a-9804-120894cd5fd4"), "/api/v1/SettingsOMV");
+            //Console.WriteLine(delomv);
             //var gen = await restApi.GetByNumberAsync<Generator>(10, "api/v1/generator/number");
             //Console.WriteLine(gen.Id);
             //var settings = new ApiSettingsOMVGenerator
