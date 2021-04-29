@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Base.APIClient.WorkBaseData.Domain.Entity
@@ -8,7 +7,7 @@ namespace Base.APIClient.WorkBaseData.Domain.Entity
     {
 
         [Display(Name = "Ссылка на генератор")]
-        [JsonIgnore]
+        
         public Generator Generator { get; set; }
         public Guid GeneratorId { get; set; }
         [Display(Name = "Первая точка по активной мощности")]

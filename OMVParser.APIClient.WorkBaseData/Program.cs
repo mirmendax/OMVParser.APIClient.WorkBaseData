@@ -23,11 +23,13 @@ namespace OMVParser.APIClient.WorkBaseData
             var getOmv = await restApi.GetItemAsync<SettingsOMVGenerator>(omv[0].Id, "/api/v1/SettingsOMV");
             Console.WriteLine(JsonConvert.SerializeObject(getOmv, Formatting.Indented));
             getOmv.P4 = 100;
-            getOmv.GeneratorId = (await restApi.GetItemAsync<Generator>(5, "/api/v1/generator/number/")).Id;
+            getOmv.GeneratorId = (await restApi.GetItemAsync<Generator>(8, "/api/v1/generator/number/")).Id;
             var update = await restApi.UpdateAsync<SettingsOMVGenerator>(getOmv, getOmv.Id, "/api/v1/SettingsOMV");
-            Console.WriteLine(update);
-            getOmv = await restApi.GetItemAsync<SettingsOMVGenerator>(getOmv.Id, "/api/v1/SettingsOMV");
-            Console.WriteLine(JsonConvert.SerializeObject(getOmv, Formatting.Indented));
+            Console.WriteLine(JsonConvert.SerializeObject(update, Formatting.Indented));
+            var del = await restApi.DeleteAsync<SettingsOMVGenerator>(getOmv.Id, "/api/v1/SettingsOMV");
+            Console.WriteLine(del);
+            //getOmv = await restApi.GetItemAsync<SettingsOMVGenerator>(getOmv.Id, "/api/v1/SettingsOMV");
+            //Console.WriteLine(JsonConvert.SerializeObject(getOmv, Formatting.Indented));
             //var delomv = await restApi.DeleteAsync(Guid.Parse("a810bc46-1b6b-489a-9804-120894cd5fd4"), "/api/v1/SettingsOMV");
             //Console.WriteLine(delomv);
             //var gen = await restApi.GetByNumberAsync<Generator>(10, "api/v1/generator/number");
